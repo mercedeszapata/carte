@@ -1,0 +1,12 @@
+
+#carrito{
+    color: rgb(56,91,122);
+    width: 80px;
+}
+#botonCarrito{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    width: 90px;
+}

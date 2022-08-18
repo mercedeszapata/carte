@@ -1,0 +1,20 @@
+#contenedorBarra{
+    background-color: rgb(56,91,122) !important;
+    
+}
+#barraNavegacion{
+    display: flex;
+    justify-content: center!important;
+}
+#opcionesMenu{
+    color: white !important;
+    
+}
+#basic-nav-dropdown{
+    color: white !important;
+    
+}
+#opcionesMenu2{
+    color: white !important;
+    
+}
