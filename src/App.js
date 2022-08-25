@@ -28,12 +28,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Components/Header/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Stock from './Components/ItemCount/ItemCount';
 
 const App = ()=>{
   return(
     <>
     <Header />
     <ItemListContainer greeting="¡Bienvenido a Carté & Design!" />
+    <Stock inicial={1} total={5}/>
     </>
     
   )

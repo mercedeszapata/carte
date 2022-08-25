@@ -10,4 +10,4 @@ FUNCIONALIDADES DE LA PÁGINA:
 DEPENDENCIAS:
 
 > Uso Bootstrap para dar formato a la aplicación.
-> Uso Icons Muy para los icnonos de la aplicación.
+> Uso Icons Mui para los icnonos de la aplicación.

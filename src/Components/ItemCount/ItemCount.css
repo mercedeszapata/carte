@@ -1,0 +1,26 @@
+#cajaContador{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+#contadorInicial{
+    display: flex;
+    justify-content: center;
+}
+#botonSuma{
+    color: rgb(56,91,122);
+    border-style: none;
+    background-color: white;
+}
+#botonResta{
+    color: rgb(56,91,122);
+    border-style: none;
+    background-color: white;
+
+}
+#mensaje{
+    background-color: rgb(56,91,122);
+    border-style: none;
+    color: white;
+
+}
