@@ -29,6 +29,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Components/Header/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Stock from './Components/ItemCount/ItemCount';
+import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
+
+
 
 const App = ()=>{
   return(
@@ -36,6 +39,7 @@ const App = ()=>{
     <Header />
     <ItemListContainer greeting="¡Bienvenido a Carté & Design!" />
     <Stock inicial={1} total={5}/>
+    <ItemDetailContainer />
     </>
     
   )

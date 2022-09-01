@@ -1,41 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
-import ItemList from './ItemList';
+
+import ItemListDetail from './ItemListDetail';
 
 
-const ItemListContainer=({greeting})=>{
+
+const ItemDetailContainer=()=>{
     
-    const descripcionProductos= [
+    const descripcionCompletaProductos= [
         {imagen:'https://i.ibb.co/LtVQZf2/Recurso-1.png', nombre:'Producto 1', descripcion: 'texto informativo',precio:'$',id:'1'},
         {imagen:'https://i.ibb.co/LtVQZf2/Recurso-1.png', nombre:'Producto 2', descripcion: 'texto informativo',precio:'$', id:'2'},
         {imagen:'https://i.ibb.co/LtVQZf2/Recurso-1.png', nombre:'Producto 3', descripcion: 'texto informativo',precio:'$', id:'3'},
     ];
 
-    const promesa = new Promise((res, rej)=>{
+    const promesaDetalle = new Promise((res, rej)=>{
         setTimeout(()=>{
-            res(descripcionProductos);
+            res(descripcionCompletaProductos);
             rej ('Error');
-        },2000);
+        },3000);
     });
 
-    const [productos, setProductos]= useState ([]);
+    const [productoCompleto, setProductoCompleto]= useState ([]);
 
    useEffect(()=>{
-    promesa.then((des)=>{
-    setProductos(des);
+    promesaDetalle.then((des)=>{
+    setProductoCompleto(des);
+   
     });
    },[]);
    
+   
+    
     return (
+        
         <>
-        <div className="landing">
-            <span>{greeting}</span>
+        {
+            productoCompleto.length > 0 &&
+            <div>
+            < ItemListDetail arrayProductoCompleto={productoCompleto[0]} />
         </div>
-        <div>
-            < ItemList arrayProductos={productos} />
-        </div>
+        }
         </>
         
     )
 }
-export default ItemListContainer
+export default ItemDetailContainer

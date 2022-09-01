@@ -9,3 +9,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  /* #cardProductoCompleto{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  } */

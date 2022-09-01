@@ -20,7 +20,13 @@ const CardItem =({detalles})=>{
             
     
         </div>
-        
+        <div>
+
+
+            
+        </div>
+
+
         </>
         
       );
