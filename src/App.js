@@ -24,23 +24,44 @@
 
 // export default App;
 
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Components/Header/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Stock from './Components/ItemCount/ItemCount';
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 
 
 const App = ()=>{
+ 
   return(
     <>
+    <BrowserRouter>
     <Header />
-    <ItemListContainer greeting="¡Bienvenido a Carté & Design!" />
+    <Routes>
+
+      <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a Carté & Design!" />}>
+      </Route>
+      <Route path="/category/:categoryId" element={<ItemListContainer/>}>
+      </Route>
+      <Route path="/detalles/" element={<ItemDetailContainer/>}>
+      </Route>
+
+    </Routes>
+     
     <Stock inicial={1} total={5}/>
-    <ItemDetailContainer />
-    </>
+    
+{/* <ItemListContainer greeting="¡Bienvenido a Carté & Design!" handleProduct={handleProduct}/> 
+    <Stock inicial={1} total={5}/>
+    {
+      producto !==""? <ItemDetailContainer producto={producto} />:""
+    } */}
+    </BrowserRouter>
+
+    
+    </> 
     
   )
 

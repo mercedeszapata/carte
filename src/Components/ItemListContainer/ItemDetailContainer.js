@@ -35,7 +35,7 @@ const ItemDetailContainer=()=>{
         
         <>
         {
-            productoCompleto.length > 0 &&
+         productoCompleto.length > 0 &&
             <div>
             < ItemListDetail arrayProductoCompleto={productoCompleto[0]} />
         </div>
