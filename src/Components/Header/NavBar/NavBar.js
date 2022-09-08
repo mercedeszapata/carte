@@ -33,7 +33,7 @@ const NavBar=()=>{
               
               <NavDropdown.Divider />
             </NavDropdown>
-            <Nav.Link href="#link" id="opcionesMenu2">CARRITO</Nav.Link>
+            <NavLink to="/cart" id="opcionesMenu2">CARRITO</NavLink>
             
           </Nav>
         </Navbar.Collapse>
