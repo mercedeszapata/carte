@@ -16,7 +16,7 @@ const ItemListContainer=({greeting})=>{
         {imagen:'https://i.ibb.co/Nj4752x/musical.png', nombre:'Tarjeta musical', descripcion: 'texto informativo',precio:'$', id:'5', categoria:'tarjetas'},
         {imagen:'https://i.ibb.co/G99g2Pm/Navidad.png', nombre:'Tarjeta Navidad', descripcion: 'texto informativo',precio:'$', id:'6', categoria:'tarjetas'},
         {imagen:'https://i.ibb.co/56c9bdk/estampado1.png', nombre:'Ilustración: bosque', descripcion: 'texto informativo',precio:'$',id:'7', categoria:'ilustracion'},
-        {imagen:'https://i.ibb.co/z2tvHTQ/estampado2.png" alt="estampado2', nombre:'Ilustración: animales encantados', descripcion: 'texto informativo',precio:'$', id:'8', categoria:'ilustracion'},
+        {imagen:'https://i.ibb.co/z2tvHTQ/estampado2.png" alt="estampado2', nombre:'Ilustración: animales', descripcion: 'texto informativo',precio:'$', id:'8', categoria:'ilustracion'},
         {imagen:'https://i.ibb.co/myYZ3bz/estampado3.png', nombre:'Ilustración: floral', descripcion: 'texto informativo',precio:'$', id:'9', categoria:'ilustracion'},
     ];
  

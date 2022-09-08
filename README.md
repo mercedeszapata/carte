@@ -2,6 +2,12 @@ ECOMMERCE: Carté & Design
 
 Tienda virtual de artículos de papelería y diseño de ilustraciones.
 
+> Filtro por categorías: tomando las categorías de la base de datos se generan filtros de productos.
+> Vistas de listas de productos: vista general de productos con foto y detalles mínimos como el nombre
+> Vista de detalles: vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
+> Control de stock: revisa que los usuarios no puedan agregar más items al carrito de los que hay disponibles.
+> Carrito
+
 FUNCIONALIDADES DE LA PÁGINA:
 
 > Barra de navegación.
