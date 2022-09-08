@@ -46,7 +46,7 @@ const App = ()=>{
       </Route>
       <Route path="/category/:categoryId" element={<ItemListContainer/>}>
       </Route>
-      <Route path="/detalles/" element={<ItemDetailContainer/>}>
+      <Route path="/detalles/:detalleId" element={<ItemDetailContainer/>}>
       </Route>
 
     </Routes>

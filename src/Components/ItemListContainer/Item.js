@@ -14,7 +14,7 @@ const CardItem =({detalles})=>{
             <Card.Img variant="top" src={detalles.imagen}/>
             <Card.Body>
                 <Card.Title>{detalles.nombre}</Card.Title>
-                <NavLink to="/detalles/">
+                <NavLink to={`/detalles/${detalles.id}`}>
                     <Button variant="primary">MÁS INFORMACIÓN</Button>
                 </NavLink>
                 
