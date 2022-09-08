@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 const CardItemCompleto =({id, nombre, descripcion, imagen})=>{
     
+    
     return (
         <>
 
