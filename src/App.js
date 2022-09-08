@@ -28,9 +28,9 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Components/Header/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import Stock from './Components/ItemCount/ItemCount';
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Cart from './Components/Cart/cart';
 
 
 
@@ -48,10 +48,12 @@ const App = ()=>{
       </Route>
       <Route path="/detalles/:detalleId" element={<ItemDetailContainer/>}>
       </Route>
+      <Route path="/cart" element={<Cart />}></Route>
+      
 
     </Routes>
      
-    <Stock inicial={1} total={5}/>
+   
     
 {/* <ItemListContainer greeting="¡Bienvenido a Carté & Design!" handleProduct={handleProduct}/> 
     <Stock inicial={1} total={5}/>

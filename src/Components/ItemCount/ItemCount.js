@@ -1,6 +1,8 @@
 
 import React, {useState} from 'react';
 import './ItemCount.css';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -30,8 +32,11 @@ const Stock =({inicial, total}) =>{
             </div>
             <div>
             <button onClick={handlerClick} id="botonSuma">+</button>
-                <button id="mensaje">Agregar al carrito</button>
-                <button onClick={handlerClickQuitar} id="botonResta">-</button>
+            <NavLink to={`/cart`}>
+            <button variant="primary" id="mensaje">FINALIZAR COMPRA</button>
+            </NavLink>
+               
+                <button  onClick={handlerClickQuitar} id="botonResta">-</button>
             </div>
                 
                 
