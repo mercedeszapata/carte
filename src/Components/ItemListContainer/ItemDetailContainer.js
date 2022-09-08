@@ -25,7 +25,7 @@ const ItemDetailContainer=()=>{
         setTimeout(()=>{
             res(descripcionCompletaProductos);
             rej ('Error');
-        },3000);
+        },10);
     });
 
     const [productoCompleto, setProductoCompleto]= useState ([]);
