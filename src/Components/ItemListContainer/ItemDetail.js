@@ -4,9 +4,9 @@ import Stock from '../ItemCount/ItemCount';
 
 
 
-const CardItemCompleto =({id, nombre, descripcion, imagen})=>{
+const CardItemCompleto =({id, nombre, descripcion, imagen, stock})=>{
     
-    
+   
     return (
         <>
 
@@ -18,7 +18,7 @@ const CardItemCompleto =({id, nombre, descripcion, imagen})=>{
                 <Card.Text>{descripcion}</Card.Text>
                 <Card.Text>{id}</Card.Text>
                 {/* <Button variant="primary">COMPRAR</Button> */}
-                           <Stock inicial={1} total={5}/>
+                           <Stock inicial={1} total={stock} nombre={nombre} id={id}/>
                
             </Card.Body>
             

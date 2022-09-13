@@ -11,7 +11,7 @@ const ItemListDetail =({arrayProductoCompleto})=>{
         <div id="cardProductoCompleto">
 
             
-                <CardItemCompleto nombre={arrayProductoCompleto.nombre} id={arrayProductoCompleto.id} descripcion={arrayProductoCompleto.descripcion} imagen={arrayProductoCompleto.imagen} />
+                <CardItemCompleto nombre={arrayProductoCompleto.nombre} id={arrayProductoCompleto.id} descripcion={arrayProductoCompleto.descripcion} imagen={arrayProductoCompleto.imagen} stock={arrayProductoCompleto.stock} />
             
         </div>
     );

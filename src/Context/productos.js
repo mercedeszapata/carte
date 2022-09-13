@@ -1,13 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import './ItemListContainer.css';
-import ItemList from './ItemList';
-import { useParams } from 'react-router-dom';
-
-const ItemListContainer=({greeting})=>{
-   
-    const params = useParams();
-
-    const descripcionProductos= [
+export const  descripcionProductos= [
     {imagen:'https://i.ibb.co/LtVQZf2/Recurso-1.png', nombre:'Individual', descripcion: 'texto informativo',precio:'$',id:'1', categoria:'prodvarios', stock:5},
     {imagen:'https://i.ibb.co/5R5sLpD/menu.png', nombre:'Block Menú mensual', descripcion: 'texto informativo',precio:'$', id:'2', categoria:'prodvarios', stock:7},
     {imagen:'https://i.ibb.co/x7QYFM2/planner.png', nombre:'Block Planner', descripcion: 'texto informativo',precio:'$', id:'3', categoria:'prodvarios', stock:10},
@@ -17,41 +8,4 @@ const ItemListContainer=({greeting})=>{
     {imagen:'https://i.ibb.co/56c9bdk/estampado1.png', nombre:'Ilustración: bosque', descripcion: 'texto informativo',precio:'$',id:'7', categoria:'ilustracion', stock:3},
     {imagen:'https://i.ibb.co/z2tvHTQ/estampado2.png" alt="estampado2', nombre:'Ilustración: animales', descripcion: 'texto informativo',precio:'$', id:'8', categoria:'ilustracion', stock:15},
     {imagen:'https://i.ibb.co/myYZ3bz/estampado3.png', nombre:'Ilustración: floral', descripcion: 'texto informativo',precio:'$', id:'9', categoria:'ilustracion', stock:5},
-    ];
- 
-    const promesa = new Promise((res, rej)=>{
-        setTimeout(()=>{
-            res(descripcionProductos);
-            rej ('Error');
-        },10);
-    });
-
-    const [productos, setProductos]= useState ([]);
-
-   useEffect(()=>{
-    promesa.then((des)=>{
-        const filtrado = des.filter(it=>it.categoria== params.categoryId);
-        if(filtrado.length > 0){
-            
-
-            setProductos(filtrado);
-        }
-        else{
-            setProductos(des);
-        }
-    });
-   },[params]);
-   
-    return (
-        <>
-        <div className="landing">
-            <span>{greeting}</span>
-        </div>
-        <div>
-            < ItemList arrayProductos={productos} />
-        </div>
-        </>
-        
-    )
-}
-export default ItemListContainer
+];

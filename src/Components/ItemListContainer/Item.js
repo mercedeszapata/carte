@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Item.css';
 import { NavLink } from 'react-router-dom';
+import {contexto} from '../../Context/Contexto';
 
 const CardItem =({detalles})=>{
+
+    const { prod }= useContext(contexto);
     
     return (
         <>

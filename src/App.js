@@ -31,6 +31,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Cart from './Components/Cart/cart';
+import CustomProvider from './Context/Contexto'
 
 
 
@@ -38,22 +39,21 @@ const App = ()=>{
  
   return(
     <>
+    
+ 
     <BrowserRouter>
-    <Header />
-    <Routes>
-
-      <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a Carté & Design!" />}>
-      </Route>
-      <Route path="/category/:categoryId" element={<ItemListContainer/>}>
-      </Route>
-      <Route path="/detalles/:detalleId" element={<ItemDetailContainer/>}>
-      </Route>
-      <Route path="/cart" element={<Cart />}></Route>
-      
-
-    </Routes>
-     
-   
+        <CustomProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a Carté & Design!" />}>
+            </Route>
+            <Route path="/category/:categoryId" element={<ItemListContainer/>}>
+            </Route>
+            <Route path="/detalles/:detalleId" element={<ItemDetailContainer/>}>
+            </Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+        </CustomProvider>
     
 {/* <ItemListContainer greeting="¡Bienvenido a Carté & Design!" handleProduct={handleProduct}/> 
     <Stock inicial={1} total={5}/>

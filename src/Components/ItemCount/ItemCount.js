@@ -1,21 +1,26 @@
 
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './ItemCount.css';
 import { NavLink } from 'react-router-dom';
+import { contexto } from '../../Context/Contexto';
 
 
 
 
-const Stock =({inicial, total}) =>{
+const Stock =({inicial, total, nombre, id}) =>{
     const [contador, setContador ] = useState(inicial);
+   
+    const { agregarProducto }= useContext(contexto);
     
+  
     const handlerClick=()=>{
         
     if( contador < total){
         setContador (contador + 1);
     }
     }
-    
+
+
     const handlerClickQuitar=()=>{
         if (contador>0){
             setContador (contador - 1); 
@@ -25,20 +30,18 @@ const Stock =({inicial, total}) =>{
         return(
         <>
        
-           
             <div id="cajaContador"> 
             <div id="contadorInicial">
             <h1>{contador}</h1>
             </div>
             <div>
-            <button onClick={handlerClick} id="botonSuma">+</button>
-            <NavLink to={`/cart`}>
-            <button variant="primary" id="mensaje">FINALIZAR COMPRA</button>
+            <button  onClick={handlerClickQuitar} id="botonResta">-</button>
+              <NavLink to={`/cart`}>
+                <button onClick={()=> agregarProducto({nombre:nombre, id:id, cantidad:contador })} variant="primary" id="mensaje">AGREGAR AL CARRITO</button> 
             </NavLink>
-               
-                <button  onClick={handlerClickQuitar} id="botonResta">-</button>
+                 <button onClick={handlerClick} id="botonSuma">+</button>
+                 
             </div>
-                
                 
             </div>
         
