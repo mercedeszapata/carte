@@ -5,6 +5,7 @@ import {contexto} from '../../Context/Contexto';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './cart.css';
 import Swal from 'sweetalert2/dist/sweetalert2.all';
+import { NavLink } from 'react-router-dom';
 
 
 const Cart =()=>{
@@ -52,7 +53,14 @@ const Cart =()=>{
 
   if(carritoCompra.length ==0){
 return(
-  <p>No hay productos en tu carrito</p>
+  <>
+    <p>No hay productos en tu carrito</p>
+    <NavLink to="/">
+      <button>COMPRAR</button>
+    </NavLink>
+  </>
+  
+
 );
   }
   else{
