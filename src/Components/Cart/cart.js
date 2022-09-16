@@ -56,7 +56,7 @@ return(
   <>
     <p>No hay productos en tu carrito</p>
     <NavLink to="/">
-      <button>COMPRAR</button>
+      <button id="botonComprar">COMPRAR</button>
     </NavLink>
   </>
   
