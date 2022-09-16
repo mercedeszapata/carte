@@ -15,6 +15,7 @@ const Cart =()=>{
     const { cantiCarrito,setCantiCarrito }= useContext(contexto);
     const [acum, setAcum]= useState(0);
     
+   
     const MostrarAlerta =()=>{
       
       Swal.fire({
@@ -49,62 +50,69 @@ const Cart =()=>{
     totalCarrito();
   },[carritoCompra]);
 
-  
-
- 
-        return(
-          <>
-          <Table striped>
-       <thead>
-         <tr>
-           <th>PRODUCTO</th>
-           <th>PRECIO POR UNIDAD</th>
-           <th>CANTIDAD</th>
-           <th>PRECIO</th>
-         </tr>
-       </thead>
-       <tbody>
-         {
-             carritoCompra.map((item, index )=> {
-            
-                 return(
-                     <tr key={index} >
-                             <td >{item.nombre}</td>
-                             <td >{item.precio}</td>
-                             <td >{item.cantidad}</td>
-                             <td >{item.cantidad*item.precio}</td>
-                             <td><button onClick={()=>eliminarProducto(item.id)} id="botonBasura"><DeleteIcon id="cbasura" /></button></td>
-                     </tr>
-                     
-                
-                        )
-                      })
-
-                              
-         }
+  if(carritoCompra.length ==0){
+return(
+  <p>No hay productos en tu carrito</p>
+);
+  }
+  else{
+    return(
+      <>
+      <Table striped>
+   <thead>
+     <tr>
+       <th>PRODUCTO</th>
+       <th>PRECIO POR UNIDAD</th>
+       <th>CANTIDAD</th>
+       <th>PRECIO</th>
+     </tr>
+   </thead>
+   <tbody>
+     {
+         carritoCompra.map((item, index )=> {
         
-       </tbody>
-     </Table>
-     <Table striped>
-      <thead>
-        <tr>
-          <th>TOTAL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>${acum}</td>
-          <td><Button variant="primary" id="finalizarCompra" onClick={()=>MostrarAlerta()}>FINALIZAR COMPRA</Button></td>
-        </tr>
-      </tbody>     
-      
-    </Table>
+             return(
+                 <tr key={index} >
+                         <td >{item.nombre}</td>
+                         <td >{item.precio}</td>
+                         <td >{item.cantidad}</td>
+                         <td >{item.cantidad*item.precio}</td>
+                         <td><button onClick={()=>eliminarProducto(item.id)} id="botonBasura"><DeleteIcon id="cbasura" /></button></td>
+                 </tr>
+                 
+            
+                    )
+                  })
+
+                          
+     }
+    
+   </tbody>
+ </Table>
+ <Table striped>
+  <thead>
+    <tr>
+      <th>TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>${acum}</td>
+      <td><Button variant="primary" id="finalizarCompra" onClick={()=>MostrarAlerta()}>FINALIZAR COMPRA</Button></td>
+    </tr>
+  </tbody>     
+  
+</Table>
 
 
-     
-          </>
  
-        )
+      </>
+
+    )
+  }
+
+ 
+        
 
 }
 export default Cart;
