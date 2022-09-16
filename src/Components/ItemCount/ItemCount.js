@@ -7,7 +7,7 @@ import { contexto } from '../../Context/Contexto';
 
 
 
-const Stock =({inicial, total, nombre, id}) =>{
+const Stock =({inicial, total, nombre, id, precio}) =>{
     const [contador, setContador ] = useState(inicial);
    
     const { agregarProducto }= useContext(contexto);
@@ -37,7 +37,7 @@ const Stock =({inicial, total, nombre, id}) =>{
             <div>
             <button  onClick={handlerClickQuitar} id="botonResta">-</button>
               <NavLink to={`/cart`}>
-                <button onClick={()=> agregarProducto({nombre:nombre, id:id, cantidad:contador })} variant="primary" id="mensaje">AGREGAR AL CARRITO</button> 
+                <button onClick={()=> agregarProducto({nombre:nombre, id:id, cantidad:contador, precio:precio })} variant="primary" id="mensaje">AGREGAR AL CARRITO</button> 
             </NavLink>
                  <button onClick={handlerClick} id="botonSuma">+</button>
                  

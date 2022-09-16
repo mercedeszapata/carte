@@ -7,15 +7,15 @@ const {Provider} = contexto;
 const CustomProvider =({children})=>{
     
     const [prod, setProd]= useState ( descripcionProductos);
-
+    const [cantiCarrito, setCantiCarrito]= useState(0);
 
 
 const [carritoCompra, setCarritoCompra] =useState([]);
 
-const agregarProducto =({nombre, id, cantidad})=>{
-    console.log("esta funcion agrega productos", nombre, id, cantidad);
-    const listaNueva = [...carritoCompra, {nombre, id, cantidad}];
-    console.log(listaNueva);
+const agregarProducto =({nombre, id, cantidad, precio})=>{
+
+    const listaNueva = [...carritoCompra, {nombre, id, cantidad, precio}];
+
     setCarritoCompra(listaNueva);
 };
 
@@ -30,14 +30,18 @@ const eliminarProducto=(ids)=>{
    
 };
 
-// const eliminarProducto =(id)=>{
-//     //eliminar usando filter
-// console.log("esta funcion elimina productos")
+const vaciarCarrito=()=>{
+    
+    setCarritoCompra([]);
+};
 
-//     };
+
+
+
+
 
 return (
-    <Provider value={{prod, agregarProducto, carritoCompra, eliminarProducto}}> {children}</Provider>
+    <Provider value={{prod, agregarProducto, carritoCompra, eliminarProducto, vaciarCarrito, cantiCarrito, setCantiCarrito }}> {children}</Provider>
 )
 };
  export default CustomProvider;

@@ -9,3 +9,7 @@
     outline: inherit;
     width: 90px;
 }
+#finalizarCompra{
+    background-color: rgb(56,91,122);  
+    border: none;
+}
