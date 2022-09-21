@@ -3,6 +3,9 @@ import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
 import ItemListDetail from './ItemListDetail';
 import { contexto } from './../../Context/Contexto';
+import {db} from '../../firebase/firebase';
+import {doc, getDoc, collection} from 'firebase/firestore';
+
 
 
 const ItemDetailContainer=()=>{
@@ -24,10 +27,18 @@ const ItemDetailContainer=()=>{
     const [productoCompleto, setProductoCompleto]= useState ([]);
 
    useEffect(()=>{
-    promesaDetalle.then((des)=>{
-    setProductoCompleto(des);
+     const porductosCollection = collection (db, 'productos');
+    const refDoc= doc(porductosCollection, params.detalleId)
+    console.log(params.detalleId)
+     getDoc(refDoc)
+     .then (resultado =>{
+         setProductoCompleto(resultado.data())
+     })
+
+    // promesaDetalle.then((des)=>{
+    // setProductoCompleto(des);
    
-    });
+    // });
    },[]);
    
    
@@ -36,9 +47,11 @@ const ItemDetailContainer=()=>{
         
         <>
         {
-         productoCompleto.length > 0 &&
+            
+       productoCompleto != undefined &&
+
             <div>
-            < ItemListDetail arrayProductoCompleto={productoCompleto[params.detalleId - 1]} />
+            < ItemListDetail arrayProductoCompleto={productoCompleto} />
         </div>
         }
         </>
