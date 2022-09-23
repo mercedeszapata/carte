@@ -29,10 +29,10 @@ const ItemDetailContainer=()=>{
    useEffect(()=>{
      const porductosCollection = collection (db, 'productos');
     const refDoc= doc(porductosCollection, params.detalleId)
-    console.log(params.detalleId)
+    // console.log(params.detalleId)
      getDoc(refDoc)
      .then (resultado =>{
-         setProductoCompleto(resultado.data())
+         setProductoCompleto({...resultado.data(), id: resultado.id })
      })
 
     // promesaDetalle.then((des)=>{

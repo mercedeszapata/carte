@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
-import Carrito from './Carrito/Carrito';
+import LogoCarrito from './Carrito/logoCarrito';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const Header=()=>{
             </NavLink>
         
         <img src="https://i.ibb.co/JnV4bSK/Recurso-1.png" id="nombreMarca"></img>
-        <Carrito />
+        <LogoCarrito />
         </div>
        
         <NavBar />

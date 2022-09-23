@@ -6,7 +6,7 @@ import CardItemCompleto from './ItemDetail';
 
 
 const ItemListDetail =({arrayProductoCompleto})=>{
-console.log(arrayProductoCompleto)
+console.log("arratprodcompl",arrayProductoCompleto)
     return(
         <div id="cardProductoCompleto">
 

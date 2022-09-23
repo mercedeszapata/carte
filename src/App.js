@@ -31,7 +31,8 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Cart from './Components/Cart/cart';
-import CustomProvider from './Context/Contexto'
+import CustomProvider from './Context/Contexto';
+import Carrito from './Components/Header/Carrito/Carrito';
 
 
 
@@ -52,7 +53,9 @@ const App = ()=>{
             <Route path="/detalles/:detalleId" element={<ItemDetailContainer/>}>
             </Route>
             <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/carrito" element={<Carrito />}></Route>
           </Routes>
+          
         </CustomProvider>
     
 {/* <ItemListContainer greeting="¡Bienvenido a Carté & Design!" handleProduct={handleProduct}/> 

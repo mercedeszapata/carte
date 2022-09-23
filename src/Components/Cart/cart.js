@@ -4,30 +4,20 @@ import Table from 'react-bootstrap/Table';
 import {contexto} from '../../Context/Contexto';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './cart.css';
-import Swal from 'sweetalert2/dist/sweetalert2.all';
+// import Swal from 'sweetalert2/dist/sweetalert2.all';
 import { NavLink } from 'react-router-dom';
 
 
-const Cart =()=>{
 
-    const  {carritoCompra}= useContext(contexto);
-    const { eliminarProducto }= useContext (contexto);
-    const {vaciarCarrito}=useContext(contexto);
-    const { cantiCarrito,setCantiCarrito }= useContext(contexto);
-    const [acum, setAcum]= useState(0);
-    
-   
-    const MostrarAlerta =()=>{
-      
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'COMPRA REALIZADA CON ÉXITO',
-        showConfirmButton: false,
-        timer: 1500
-      }); 
-      vaciarCarrito();
-      };
+
+
+
+const Cart =()=>{
+  const { prod }= useContext(contexto);
+  const  {carritoCompra, acum, setAcum}= useContext(contexto);
+  const { eliminarProducto }= useContext (contexto);
+  const { cantiCarrito,setCantiCarrito }= useContext(contexto);
+
 
     const calcularPrecio=()=>{
       const calculo = (total, currentValue, currentIndex, arr)=>{
@@ -106,7 +96,11 @@ return(
   <tbody>
     <tr>
       <td>${acum}</td>
-      <td><Button variant="primary" id="finalizarCompra" onClick={()=>MostrarAlerta()}>FINALIZAR COMPRA</Button></td>
+      <td>
+        <NavLink to={`/carrito`}>
+          <Button variant="primary" id="finalizarCompra">CONTINUAR</Button>
+        </NavLink>
+      </td>
     </tr>
   </tbody>     
   

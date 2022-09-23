@@ -10,3 +10,14 @@
     outline: inherit;
     width: 90px;
 }
+#botonGuardar{
+    background-color: rgb(56,91,122);
+    color: white;
+    border: none;
+}
+#botonFinalizar{
+    background-color: rgb(56,91,122);
+    color: white;
+    border: none;
+
+}
