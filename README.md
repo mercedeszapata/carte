@@ -26,7 +26,8 @@ DEPENDENCIAS:
 
 APLICACIÓN EN FUNCIONAMIENTO
 
-![Presentación](https://user-images.githubusercontent.com/95383709/194789905-25919481-d2bf-4042-8e98-e8b883cd3242.gif)
+![Presentación2-min](https://user-images.githubusercontent.com/95383709/194790390-c40b222e-88f0-4570-9930-2953f80e7337.gif)
+
 
 
 AUTOR
