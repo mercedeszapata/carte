@@ -26,7 +26,8 @@ DEPENDENCIAS:
 
 APLICACIÓN EN FUNCIONAMIENTO
 
-![](https://file%2B.vscode-resource.vscode-cdn.net/d%3A/CODER%20HOUSE/REACT/Presentaci%C3%B3n1.gif?version%3D1665366514359)
+![Presentación](https://user-images.githubusercontent.com/95383709/194789905-25919481-d2bf-4042-8e98-e8b883cd3242.gif)
+
 
 AUTOR
 
