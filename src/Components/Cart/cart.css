@@ -1,20 +1,36 @@
-#cbasura{
-    color: rgb(56,91,122);
+#cbasura {
+    color: rgb(56, 91, 122);
     width: 80px;
 }
-#botonBasura{
+
+#botonBasura {
     background: none;
     border: none;
     cursor: pointer;
     outline: inherit;
     width: 90px;
 }
-#finalizarCompra{
-    background-color: rgb(56,91,122);  
+
+#finalizarCompra {
+    background-color: rgb(56, 91, 122);
     border: none;
 }
-#botonComprar{
-    background-color: rgb(56,91,122);  
-    border: none;
-    color:white; 
+
+.botonComprar {
+    background-color: rgb(56, 91, 122);
+    border: rgb(56, 91, 122);
+    color: white;
 }
+
+.botonComprar:hover{
+    background-color: white ;
+    border-color: rgb(56, 91, 122);
+    color: rgb(56, 91, 122);
+    font-weight: bolder;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,20 +1,20 @@
-#contenedorBarra{
-    background-color: rgb(56,91,122) !important;
-    
+#contenedorBarra {
+    background-color: rgb(56, 91, 122) !important;
 }
-#barraNavegacion{
+
+#barraNavegacion {
     display: flex;
-    justify-content: center!important;
+    justify-content: center !important;
 }
-#opcionesMenu{
+
+#opcionesMenu {
     color: white !important;
-    
 }
-#basic-nav-dropdown{
+
+#basic-nav-dropdown {
     color: white !important;
-    
 }
-#opcionesMenu2{
+
+#opcionesMenu2 {
     color: white !important;
-    
 }

@@ -1,26 +1,39 @@
-#cajaContador{
+#cajaContador {
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
 }
-#contadorInicial{
+
+#contadorInicial {
     display: flex;
     justify-content: center;
 }
-#botonSuma{
-    color: rgb(56,91,122);
+
+#botonSuma {
+    color: rgb(56, 91, 122);
     border-style: none;
     background-color: white;
+    font-weight: bolder;
+    font-size: x-large;
 }
-#botonResta{
-    color: rgb(56,91,122);
+
+#botonResta {
+    color: rgb(56, 91, 122);
     border-style: none;
     background-color: white;
+    font-weight: bolder;
+    font-size: x-large;
 
 }
-#mensaje{
-    background-color: rgb(56,91,122);
+
+.botonComprar {
+    background-color: rgb(56, 91, 122);
     border-style: none;
     color: white;
+}
 
+.botonComprar:hover {
+    background-color: white;
+    border-color: rgb(56, 91, 122);
+    color: rgb(56, 91, 122);
 }

@@ -8,6 +8,11 @@ Tienda virtual de artículos de papelería y diseño de ilustraciones.
 > Control de stock: revisa que los usuarios no puedan agregar más items al carrito de los que hay disponibles.
 > Carrito
 
+INSTALACIÓN
+
+1. Se debe clonar el repositorio
+2. Ingresar en la terminal "npm start" para correr el proyecto, que estará disponible en http://localhost:3000
+
 FUNCIONALIDADES DE LA PÁGINA:
 
 > Barra de navegación.
@@ -17,3 +22,11 @@ DEPENDENCIAS:
 
 > Uso Bootstrap para dar formato a la aplicación.
 > Uso Icons Mui para los icnonos de la aplicación.
+> Uso SweetAlert para las alertas.
+
+APLICACIÓN EN FUNCIONAMIENTO
+
+AUTOR
+
+Mercedes Zapata 
+

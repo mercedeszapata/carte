@@ -1,23 +1,32 @@
-
-#carrito{
-    color: rgb(56,91,122);
+#carrito {
+    color: rgb(56, 91, 122);
     width: 80px;
 }
-#botonCarrito{
+
+#botonCarrito {
     background: none;
     border: none;
     cursor: pointer;
     outline: inherit;
     width: 90px;
 }
-#botonGuardar{
-    background-color: rgb(56,91,122);
-    color: white;
-    border: none;
-}
-#botonFinalizar{
-    background-color: rgb(56,91,122);
-    color: white;
-    border: none;
 
+.botonComprar {
+    background-color: rgb(56, 91, 122);
+    color: white;
+    border: none;
+    margin: 1px;
 }
+
+.botonComprar:hover {
+    background-color: white;
+    border-color: rgb(56, 91, 122);
+    color: rgb(56, 91, 122);
+}
+
+form {
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+

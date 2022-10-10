@@ -1,19 +1,21 @@
-header{
+header {
     display: flex;
     flex-direction: column;
 }
-header div{
-display: grid;
-grid-template-columns: auto auto auto;
-align-items: center;
-justify-content:space-around;
+
+header div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-around;
 }
-#logo{
-width:80px;
-padding: 0.5em;
-      
+
+#logo {
+    width: 80px;
+    padding: 0.5em;
 }
-#nombreMarca{
-    width:250px;
+
+#nombreMarca {
+    width: 250px;
 
 }

@@ -1,4 +1,3 @@
-
 export const  descripcionProductos= [
     {imagen:'https://i.ibb.co/LtVQZf2/Recurso-1.png', nombre:'Individual', descripcion: 'texto informativo',id:'1', categoria:'prodvarios', stock:5, precio:1000},
     {imagen:'https://i.ibb.co/5R5sLpD/menu.png', nombre:'Block Menú mensual', descripcion: 'texto informativo', id:'2', categoria:'prodvarios', stock:7, precio:500},

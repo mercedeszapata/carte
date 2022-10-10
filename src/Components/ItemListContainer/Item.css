@@ -1,0 +1,16 @@
+.botonComprar {
+    background-color: rgb(56, 91, 122);
+    color: white;
+    border: none;
+}
+
+.botonComprar:hover {
+    background-color: white;
+    border-color: rgb(56, 91, 122);
+    color: rgb(56, 91, 122);
+}
+
+.cajaCard {
+    display: flex;
+    justify-content: center;
+}
